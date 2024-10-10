@@ -14,9 +14,9 @@ jobs:
         - 5432:5432
 
       env: 
-       POSTGRESQL_USERNAME: docker
-       POSTGRESQL_PASSWORD: docker
-       POSTGRESQL_DATABASE: gyms-api 
+        POSTGRESQL_USERNAME: docker
+        POSTGRESQL_PASSWORD: docker
+        POSTGRESQL_DATABASE: gyms-api 
 
       steps:
         - uses: actions/checkout@v3
