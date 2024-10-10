@@ -2,6 +2,5 @@ node_modules
 build
 .env
 docker-compose.yaml
-prisma/
 coverage
 .vscode
