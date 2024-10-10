@@ -3,18 +3,19 @@ import { InMemoryGymsRepository } from '@/repositories/in-memory/in-memory-gyms-
 import { CheckInUseCase } from '@/use-cases/check-in'
 import { MaxDistanceError } from '@/use-cases/errors/max-distance-error'
 import { MaxNumberOfCheckInsError } from '@/use-cases/errors/max-number-of-check-ins'
-import { Decimal } from '@prisma/client/runtime/library'
 import { afterEach } from 'node:test'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 let checkInRepository: InMemoryCheckInsRepository
 let gymsRepository: InMemoryGymsRepository
+
 let sut: CheckInUseCase
 
 describe('Check-in Use Case', () => {
   beforeEach(async () => {
     checkInRepository = new InMemoryCheckInsRepository()
     gymsRepository = new InMemoryGymsRepository()
+
     sut = new CheckInUseCase(checkInRepository, gymsRepository)
 
     await gymsRepository.create({
@@ -90,8 +91,8 @@ describe('Check-in Use Case', () => {
       title: 'Andre Sports',
       description: '',
       phone: '',
-      latitude: new Decimal(-23.4451494),
-      longitude: new Decimal(-46.7256274),
+      latitude: -23.4451494,
+      longitude: -46.7256274,
     })
 
     await expect(() =>

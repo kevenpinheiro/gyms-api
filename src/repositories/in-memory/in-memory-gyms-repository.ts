@@ -24,8 +24,8 @@ export class InMemoryGymsRepository implements GymsRepository {
           longitude: params.longitude,
         },
         {
-          latitude: item.latitude.toNumber(),
-          longitude: item.longitude.toNumber(),
+          latitude: item.latitude,
+          longitude: item.longitude,
         },
       )
 
@@ -45,8 +45,8 @@ export class InMemoryGymsRepository implements GymsRepository {
       title: data.title,
       description: data.description ?? null,
       phone: data.phone ?? null,
-      latitude: new Prisma.Decimal(data.latitude.toString()),
-      longitude: new Prisma.Decimal(data.longitude.toString()),
+      latitude: data.latitude,
+      longitude: data.longitude,
       created_at: new Date(),
     }
 
