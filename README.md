@@ -30,3 +30,9 @@ A Gyms API permite uma série de operações essenciais para um sistema de geren
 - ✅ **Check-in em Academia**: Usuários podem realizar check-ins em academias.
 - ✅ **Validação de Check-in**: Permite ao sistema validar a presença do usuário em uma academia.
 - ✅ **Cadastro de Academia**: Academias podem ser adicionadas à plataforma.
+
+---
+
+## GitHub Actions
+Este projeto inclui uma estratégia de **CI**, permitindo que testes unitários e E2E sejam  
+executados sempre que for feito um novo push.
